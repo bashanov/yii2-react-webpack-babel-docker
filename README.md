@@ -1,5 +1,8 @@
 # yii2-react-webpack-babel-docker
-Yii2 + ReactJs + Webpack + Babel web environment with Docker
+Yii2 + ReactJs + Webpack + Babel web environment with Docker  
+(+ bootstrap 4 (scss) with easy customization)
+
+Dockerized: nginx, php7.3 (with nodejs 12.5 and composer inside), mailtrap
 
 Use may use the repo to set up environment in few minutes  
 Run docker-compose to up services
