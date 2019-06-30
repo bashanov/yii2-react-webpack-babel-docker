@@ -4,7 +4,7 @@ Yii2 + ReactJs + Webpack + Babel web environment with Docker
 
 Dockerized: nginx, php7.3 (with nodejs 12.5 and composer inside), mailtrap
 
-Use may use the repo to set up environment in few minutes  
+You may use the repo to set up environment in few minutes  
 Run docker-compose to up services
 ```bash
 $ docker-compose up -d
