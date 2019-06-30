@@ -1,0 +1,45 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --watch --watch-polling",
+    "build": "webpack --mode production",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:bashanov/yii2-react-webpack-babel-docker.git"
+  },
+  "keywords": [
+    "yii2",
+    "react",
+    "reactjs",
+    "webpack",
+    "babel",
+    "docker"
+  ],
+  "author": "Bashanov Evgeny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com:bashanov/yii2-react-webpack-babel-docker/issues"
+  },
+  "homepage": "https://github.com:bashanov/yii2-react-webpack-babel-docker#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5"
+  }
+}

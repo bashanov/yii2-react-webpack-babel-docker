@@ -1,0 +1,42 @@
+version: '3.6'
+
+services:
+  nginx:
+    image: nginx:1.17.0-alpine
+    container_name: myproject_nginx
+    restart: unless-stopped
+    env_file:
+      - ./docker/nginx.env
+    ports:
+      - 80:80
+    links:
+      - php
+    volumes:
+      - ./runtime/docker/nginx/logs:/var/log/nginx
+      - ./docker/nginx/conf:/etc/nginx/conf.d
+      - .:/var/www
+  php:
+    build: ./docker/php/
+    container_name: myproject_php
+    restart: unless-stopped
+    volumes:
+      - .:/var/www
+      - ./runtime/docker/php/composer:/tmp/.composer/cache
+    links:
+      - mysql
+  mysql:
+    image: mysql:8.0.16
+    container_name: myproject_mysql
+    restart: unless-stopped
+    env_file:
+      - ./docker/mysql.env
+    ports:
+      - 3306:3306
+    volumes:
+      - ./runtime/docker/mysql/data:/var/lib/mysql
+      - ./docker/mysql/init:/docker-entrypoint-initdb.d
+      - ./docker/mysql/conf:/etc/mysql/conf.d
+  mailtrap:
+    image: schickling/mailcatcher
+    container_name: myproject_mailtrap
+    restart: unless-stopped

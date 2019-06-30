@@ -1,0 +1,6 @@
+.git/
+.idea/
+runtime/
+vendor/
+node_modules/
+public/assets/
