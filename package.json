@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com:bashanov/yii2-react-webpack-babel-docker#readme",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1"
   },
   "devDependencies": {
